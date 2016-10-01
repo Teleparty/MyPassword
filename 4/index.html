@@ -1,0 +1,19 @@
+<?php
+if (isset($_POST['submit'])) {
+	$to = $_POST['to'];
+	
+	mail($to, 'Your Password Reminder', 'Junghwan, Here is your password: secret') or die('could not send');
+}
+?>
+
+<html>
+<head>
+<title>send password reminder</title>
+</head>
+<body>
+<form action="" method="POST">
+<input type="hidden" name="to" value="junghwan.han@ris.ae">
+<input type="submit" name="submit" value="Send password to Junghwan (the mail actually takes about 3 days to arrive)">
+</form>
+</body>
+</html>
