@@ -20,10 +20,10 @@ $count = mysqli_num_rows($result);
 $sql_submit = "INSERT INTO views (ip, page) VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_GET['page']."')";
 mysqli_query($conn, $sql_submit);
 
-// Create a 100*30 image
+// Create a 150*20 image
 $im = imagecreate(150, 20);
 
-// White background and blue text
+// White background and black text
 $bg = imagecolorallocate($im, 255, 255, 255);
 $textcolor = imagecolorallocate($im, 0, 0, 0);
 
